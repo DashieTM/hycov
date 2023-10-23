@@ -27,12 +27,8 @@ void dispatch_enteroverview(std::string arg) { //进入overview
 		if (PWORKSPACE->m_bHasFullscreenWindow) {
     	    PFULLWINDOW = g_pCompositor->getFullscreenWindowOnWorkspace(PWORKSPACE->m_iID);
     	    g_pCompositor->setWindowFullscreen(PFULLWINDOW, false, FULLSCREEN_FULL);
+			PFULLWINDOW->m_bIsFullscreen = true;
     	}
-		if(w->m_bIsFloating){
-        	w->m_bIsFloating = false;
-        	w->updateDynamicRules();	
-			// g_GridLayout->changeWindowFloatingMode(w.get());		
-		}
 	}
 	g_pLayoutManager->switchToLayout("grid");
 	return;
@@ -46,13 +42,13 @@ void dispatch_leaveoverview(std::string arg) { //离开overview
 	}
 	g_pLayoutManager->switchToLayout(*configLayoutName);
 
-	for (auto& w : g_pCompositor->m_vWindows) {
-        if (w->isHidden() || !w->m_bIsMapped || w->m_bFadingOut)
-            continue;
-		if(w->m_bIsFloating){
- 			g_pLayoutManager->getCurrentLayout()->onWindowCreatedFloating(w.get());
-		}
-	}
+	// for (auto& w : g_pCompositor->m_vWindows) {
+    //     if (w->isHidden() || !w->m_bIsMapped || w->m_bFadingOut)
+    //         continue;
+	// 	if(w->m_bIsFloating){
+ 	// 		g_pLayoutManager->getCurrentLayout()->onWindowCreatedFloating(w.get());
+	// 	}
+	// }
 	return;
 }
 
