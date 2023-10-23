@@ -1,0 +1,7 @@
+/home/wrq/deskenv/dev/hyprcov/build/CMakeFiles/hycov.dir
+/home/wrq/deskenv/dev/hyprcov/build/CMakeFiles/edit_cache.dir
+/home/wrq/deskenv/dev/hyprcov/build/CMakeFiles/rebuild_cache.dir
+/home/wrq/deskenv/dev/hyprcov/build/CMakeFiles/list_install_components.dir
+/home/wrq/deskenv/dev/hyprcov/build/CMakeFiles/install.dir
+/home/wrq/deskenv/dev/hyprcov/build/CMakeFiles/install/local.dir
+/home/wrq/deskenv/dev/hyprcov/build/CMakeFiles/install/strip.dir
