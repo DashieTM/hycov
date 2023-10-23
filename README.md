@@ -34,3 +34,8 @@ plugin {
 }
 
 ```
+
+todo
+1.浮动窗口进入overview前退出overview,退出overview前还原浮动
+2.保持浮动窗口前后切换的时候位置和大小不变
+3.全屏窗口退出后恢复全屏
