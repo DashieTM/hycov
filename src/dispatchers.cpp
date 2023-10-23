@@ -28,6 +28,11 @@ void dispatch_enteroverview(std::string arg) { //进入overview
     	    PFULLWINDOW = g_pCompositor->getFullscreenWindowOnWorkspace(PWORKSPACE->m_iID);
     	    g_pCompositor->setWindowFullscreen(PFULLWINDOW, false, FULLSCREEN_FULL);
     	}
+		if(w->m_bIsFloating){
+        	w->m_bIsFloating = false;
+        	w->updateDynamicRules();	
+			// g_GridLayout->changeWindowFloatingMode(w.get());		
+		}
 	}
 	g_pLayoutManager->switchToLayout("grid");
 	return;
