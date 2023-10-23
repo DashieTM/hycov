@@ -42,7 +42,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /usr/bin/cmake --regenerate-during-build -S/home/wrq/deskenv/dev/hyprcov -B/home/wrq/deskenv/dev/hyprcov/build
+  command = /usr/bin/cmake --regenerate-during-build -S/home/wrq/deskenv/dev/hycov -B/home/wrq/deskenv/dev/hycov/build
   description = Re-running CMake...
   generator = 1
 

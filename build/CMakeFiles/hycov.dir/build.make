@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wrq/deskenv/dev/hyprcov
+CMAKE_SOURCE_DIR = /home/wrq/deskenv/dev/hycov
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wrq/deskenv/dev/hyprcov/build
+CMAKE_BINARY_DIR = /home/wrq/deskenv/dev/hycov/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/hycov.dir/depend.make
@@ -70,60 +70,60 @@ include CMakeFiles/hycov.dir/progress.make
 include CMakeFiles/hycov.dir/flags.make
 
 CMakeFiles/hycov.dir/src/main.cpp.o: CMakeFiles/hycov.dir/flags.make
-CMakeFiles/hycov.dir/src/main.cpp.o: /home/wrq/deskenv/dev/hyprcov/src/main.cpp
+CMakeFiles/hycov.dir/src/main.cpp.o: /home/wrq/deskenv/dev/hycov/src/main.cpp
 CMakeFiles/hycov.dir/src/main.cpp.o: CMakeFiles/hycov.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/wrq/deskenv/dev/hyprcov/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/hycov.dir/src/main.cpp.o"
-	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hycov.dir/src/main.cpp.o -MF CMakeFiles/hycov.dir/src/main.cpp.o.d -o CMakeFiles/hycov.dir/src/main.cpp.o -c /home/wrq/deskenv/dev/hyprcov/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/wrq/deskenv/dev/hycov/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/hycov.dir/src/main.cpp.o"
+	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hycov.dir/src/main.cpp.o -MF CMakeFiles/hycov.dir/src/main.cpp.o.d -o CMakeFiles/hycov.dir/src/main.cpp.o -c /home/wrq/deskenv/dev/hycov/src/main.cpp
 
 CMakeFiles/hycov.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/hycov.dir/src/main.cpp.i"
-	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wrq/deskenv/dev/hyprcov/src/main.cpp > CMakeFiles/hycov.dir/src/main.cpp.i
+	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wrq/deskenv/dev/hycov/src/main.cpp > CMakeFiles/hycov.dir/src/main.cpp.i
 
 CMakeFiles/hycov.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/hycov.dir/src/main.cpp.s"
-	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wrq/deskenv/dev/hyprcov/src/main.cpp -o CMakeFiles/hycov.dir/src/main.cpp.s
+	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wrq/deskenv/dev/hycov/src/main.cpp -o CMakeFiles/hycov.dir/src/main.cpp.s
 
 CMakeFiles/hycov.dir/src/dispatchers.cpp.o: CMakeFiles/hycov.dir/flags.make
-CMakeFiles/hycov.dir/src/dispatchers.cpp.o: /home/wrq/deskenv/dev/hyprcov/src/dispatchers.cpp
+CMakeFiles/hycov.dir/src/dispatchers.cpp.o: /home/wrq/deskenv/dev/hycov/src/dispatchers.cpp
 CMakeFiles/hycov.dir/src/dispatchers.cpp.o: CMakeFiles/hycov.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/wrq/deskenv/dev/hyprcov/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/hycov.dir/src/dispatchers.cpp.o"
-	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hycov.dir/src/dispatchers.cpp.o -MF CMakeFiles/hycov.dir/src/dispatchers.cpp.o.d -o CMakeFiles/hycov.dir/src/dispatchers.cpp.o -c /home/wrq/deskenv/dev/hyprcov/src/dispatchers.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/wrq/deskenv/dev/hycov/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/hycov.dir/src/dispatchers.cpp.o"
+	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hycov.dir/src/dispatchers.cpp.o -MF CMakeFiles/hycov.dir/src/dispatchers.cpp.o.d -o CMakeFiles/hycov.dir/src/dispatchers.cpp.o -c /home/wrq/deskenv/dev/hycov/src/dispatchers.cpp
 
 CMakeFiles/hycov.dir/src/dispatchers.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/hycov.dir/src/dispatchers.cpp.i"
-	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wrq/deskenv/dev/hyprcov/src/dispatchers.cpp > CMakeFiles/hycov.dir/src/dispatchers.cpp.i
+	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wrq/deskenv/dev/hycov/src/dispatchers.cpp > CMakeFiles/hycov.dir/src/dispatchers.cpp.i
 
 CMakeFiles/hycov.dir/src/dispatchers.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/hycov.dir/src/dispatchers.cpp.s"
-	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wrq/deskenv/dev/hyprcov/src/dispatchers.cpp -o CMakeFiles/hycov.dir/src/dispatchers.cpp.s
+	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wrq/deskenv/dev/hycov/src/dispatchers.cpp -o CMakeFiles/hycov.dir/src/dispatchers.cpp.s
 
 CMakeFiles/hycov.dir/src/GridLayout.cpp.o: CMakeFiles/hycov.dir/flags.make
-CMakeFiles/hycov.dir/src/GridLayout.cpp.o: /home/wrq/deskenv/dev/hyprcov/src/GridLayout.cpp
+CMakeFiles/hycov.dir/src/GridLayout.cpp.o: /home/wrq/deskenv/dev/hycov/src/GridLayout.cpp
 CMakeFiles/hycov.dir/src/GridLayout.cpp.o: CMakeFiles/hycov.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/wrq/deskenv/dev/hyprcov/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/hycov.dir/src/GridLayout.cpp.o"
-	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hycov.dir/src/GridLayout.cpp.o -MF CMakeFiles/hycov.dir/src/GridLayout.cpp.o.d -o CMakeFiles/hycov.dir/src/GridLayout.cpp.o -c /home/wrq/deskenv/dev/hyprcov/src/GridLayout.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/wrq/deskenv/dev/hycov/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/hycov.dir/src/GridLayout.cpp.o"
+	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hycov.dir/src/GridLayout.cpp.o -MF CMakeFiles/hycov.dir/src/GridLayout.cpp.o.d -o CMakeFiles/hycov.dir/src/GridLayout.cpp.o -c /home/wrq/deskenv/dev/hycov/src/GridLayout.cpp
 
 CMakeFiles/hycov.dir/src/GridLayout.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/hycov.dir/src/GridLayout.cpp.i"
-	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wrq/deskenv/dev/hyprcov/src/GridLayout.cpp > CMakeFiles/hycov.dir/src/GridLayout.cpp.i
+	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wrq/deskenv/dev/hycov/src/GridLayout.cpp > CMakeFiles/hycov.dir/src/GridLayout.cpp.i
 
 CMakeFiles/hycov.dir/src/GridLayout.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/hycov.dir/src/GridLayout.cpp.s"
-	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wrq/deskenv/dev/hyprcov/src/GridLayout.cpp -o CMakeFiles/hycov.dir/src/GridLayout.cpp.s
+	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wrq/deskenv/dev/hycov/src/GridLayout.cpp -o CMakeFiles/hycov.dir/src/GridLayout.cpp.s
 
 CMakeFiles/hycov.dir/src/globaleventhook.cpp.o: CMakeFiles/hycov.dir/flags.make
-CMakeFiles/hycov.dir/src/globaleventhook.cpp.o: /home/wrq/deskenv/dev/hyprcov/src/globaleventhook.cpp
+CMakeFiles/hycov.dir/src/globaleventhook.cpp.o: /home/wrq/deskenv/dev/hycov/src/globaleventhook.cpp
 CMakeFiles/hycov.dir/src/globaleventhook.cpp.o: CMakeFiles/hycov.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/wrq/deskenv/dev/hyprcov/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/hycov.dir/src/globaleventhook.cpp.o"
-	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hycov.dir/src/globaleventhook.cpp.o -MF CMakeFiles/hycov.dir/src/globaleventhook.cpp.o.d -o CMakeFiles/hycov.dir/src/globaleventhook.cpp.o -c /home/wrq/deskenv/dev/hyprcov/src/globaleventhook.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/wrq/deskenv/dev/hycov/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/hycov.dir/src/globaleventhook.cpp.o"
+	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hycov.dir/src/globaleventhook.cpp.o -MF CMakeFiles/hycov.dir/src/globaleventhook.cpp.o.d -o CMakeFiles/hycov.dir/src/globaleventhook.cpp.o -c /home/wrq/deskenv/dev/hycov/src/globaleventhook.cpp
 
 CMakeFiles/hycov.dir/src/globaleventhook.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/hycov.dir/src/globaleventhook.cpp.i"
-	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wrq/deskenv/dev/hyprcov/src/globaleventhook.cpp > CMakeFiles/hycov.dir/src/globaleventhook.cpp.i
+	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wrq/deskenv/dev/hycov/src/globaleventhook.cpp > CMakeFiles/hycov.dir/src/globaleventhook.cpp.i
 
 CMakeFiles/hycov.dir/src/globaleventhook.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/hycov.dir/src/globaleventhook.cpp.s"
-	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wrq/deskenv/dev/hyprcov/src/globaleventhook.cpp -o CMakeFiles/hycov.dir/src/globaleventhook.cpp.s
+	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wrq/deskenv/dev/hycov/src/globaleventhook.cpp -o CMakeFiles/hycov.dir/src/globaleventhook.cpp.s
 
 # Object files for target hycov
 hycov_OBJECTS = \
@@ -141,7 +141,7 @@ libhycov.so: CMakeFiles/hycov.dir/src/GridLayout.cpp.o
 libhycov.so: CMakeFiles/hycov.dir/src/globaleventhook.cpp.o
 libhycov.so: CMakeFiles/hycov.dir/build.make
 libhycov.so: CMakeFiles/hycov.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/wrq/deskenv/dev/hyprcov/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX shared library libhycov.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/wrq/deskenv/dev/hycov/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX shared library libhycov.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/hycov.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -153,6 +153,6 @@ CMakeFiles/hycov.dir/clean:
 .PHONY : CMakeFiles/hycov.dir/clean
 
 CMakeFiles/hycov.dir/depend:
-	cd /home/wrq/deskenv/dev/hyprcov/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/wrq/deskenv/dev/hyprcov /home/wrq/deskenv/dev/hyprcov /home/wrq/deskenv/dev/hyprcov/build /home/wrq/deskenv/dev/hyprcov/build /home/wrq/deskenv/dev/hyprcov/build/CMakeFiles/hycov.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/wrq/deskenv/dev/hycov/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/wrq/deskenv/dev/hycov /home/wrq/deskenv/dev/hycov /home/wrq/deskenv/dev/hycov/build /home/wrq/deskenv/dev/hycov/build /home/wrq/deskenv/dev/hycov/build/CMakeFiles/hycov.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/hycov.dir/depend
 
