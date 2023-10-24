@@ -97,10 +97,10 @@ void GridLayout::onWindowCreatedTiling(CWindow* pWindow, eDirection direction) {
         PNODE->ovbk_pWindow_isFloating = floatingStateBak;
         PNODE->ovbk_pWindow_isFullscreen = fullscreenStateBak;
 
-    if (PWORKSPACE->m_bHasFullscreenWindow) {
-        const auto PFULLWINDOW = g_pCompositor->getFullscreenWindowOnWorkspace(PWORKSPACE->m_iID);
-        g_pCompositor->setWindowFullscreen(PFULLWINDOW, false, FULLSCREEN_FULL);
-    }
+    // if (PWORKSPACE->m_bHasFullscreenWindow) {
+    //     const auto PFULLWINDOW = g_pCompositor->getFullscreenWindowOnWorkspace(PWORKSPACE->m_iID);
+    //     g_pCompositor->setWindowFullscreen(PFULLWINDOW, false, FULLSCREEN_FULL);
+    // }
     // 显示器重新计算布局
     recalculateMonitor(pWindow->m_iMonitorID);
 
@@ -243,6 +243,11 @@ void GridLayout::applyNodeDataToWindow(SGridNodeData* pNode) { //将节点的数
 void GridLayout::recalculateWindow(CWindow* pWindow) {
     ; // empty
 }
+
+// void GridLayout::onWindowCreated(CWindow* pWindow, eDirection direction) {
+
+// 	IHyprLayout::onWindowCreated(pWindow, direction);
+// }
 
 void GridLayout::resizeActiveWindow(const Vector2D& pixResize, eRectCorner corner, CWindow* pWindow) {
     ; // empty
