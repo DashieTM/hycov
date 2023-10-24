@@ -52,14 +52,20 @@ void dispatch_leaveoverview(std::string arg) { //离开overview
 			g_pLayoutManager->getCurrentLayout()->onWindowCreatedFloating(n.pWindow);	
 			continue;
 		}
+	}
+
+	g_pLayoutManager->switchToLayout(*configLayoutName);
+
+	for (auto& n : g_GridLayout->m_lGridNodesData) {
+		hycov_log(LOG,"dispatch_leaveoverview {}",n.pWindow);
 		if(n.ovbk_pWindow_isFullscreen){
 			// hycov_log(LOG,"test {}",w.get());
 			g_pCompositor->setWindowFullscreen(n.pWindow, true, FULLSCREEN_FULL);	
 			continue;
 		}
 	}
+
 	g_GridLayout->m_lGridNodesData.clear();
-	g_pLayoutManager->switchToLayout(*configLayoutName);
 	// g_pLayoutManager->getCurrentLayout()->onEnable();
 
 	return;
