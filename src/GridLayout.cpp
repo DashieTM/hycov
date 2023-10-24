@@ -330,5 +330,5 @@ void GridLayout::onEnable() {
 
 void GridLayout::onDisable() {
   
-     m_lGridNodesData.clear();
+    //  m_lGridNodesData.clear();
 }

@@ -36,19 +36,28 @@ void dispatch_enteroverview(std::string arg) { //进入overview
 
 void dispatch_leaveoverview(std::string arg) { //离开overview
 	std::string *configLayoutName = &HyprlandAPI::getConfigValue(PHANDLE, "general:layout")->strValue;
+	SGridNodeData *node;
 	if(!g_GridLayout->m_lGridNodesData.empty()){
 		g_GridLayout->moveWindowToSourceWorkspace();
 		g_GridLayout->changeToActivceSourceWorkspace();
 	}
 	g_pLayoutManager->switchToLayout(*configLayoutName);
 
-	// for (auto& w : g_pCompositor->m_vWindows) {
-    //     if (w->isHidden() || !w->m_bIsMapped || w->m_bFadingOut)
-    //         continue;
-	// 	if(w->m_bIsFloating){
- 	// 		g_pLayoutManager->getCurrentLayout()->onWindowCreatedFloating(w.get());
-	// 	}
-	// }
+	for (auto& w : g_pCompositor->m_vWindows) {
+        if (w->isHidden() || !w->m_bIsMapped || w->m_bFadingOut)
+            continue;
+		node = g_GridLayout->getNodeFromWindow(w.get());
+		if(node->ovbk_pWindow_isFloating){
+            w.get()->m_bIsFloating = true;
+            // w.get()->updateDynamicRules();
+			// g_pLayoutManager->getCurrentLayout()->changeWindowFloatingMode(w.get());
+			g_pLayoutManager->getCurrentLayout()->onWindowCreatedFloating(w.get());	
+		}
+		if(node->ovbk_pWindow_isFullscreen){
+			g_pCompositor->setWindowFullscreen(w.get(), true, FULLSCREEN_FULL);	
+		}
+	}
+	g_GridLayout->m_lGridNodesData.clear();
 	return;
 }
 
