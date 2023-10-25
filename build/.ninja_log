@@ -1,6 +1,7 @@
 # ninja log v5
-3	9187	1698057793119344425	CMakeFiles/hycov.dir/src/main.cpp.o	fe054502308f765e
-3	11191	1698057795119333451	CMakeFiles/hycov.dir/src/GridLayout.cpp.o	517417034fd8eb48
-3	9077	1698057793012678344	CMakeFiles/hycov.dir/src/dispatchers.cpp.o	bc3febc89f9c33e
-3	9512	1698057793449342614	CMakeFiles/hycov.dir/src/globaleventhook.cpp.o	cd24ceaff950041d
-11191	11571	1698057795515997941	libhycov.so	28d1b1c81111d4fa
+12540	12958	1698246627563696728	libhycov.so	28d1b1c81111d4fa
+10	10201	1698246624790378613	CMakeFiles/hycov.dir/src/globaleventhook.cpp.o	cd45337564379290
+9	12540	1698246627137032403	CMakeFiles/hycov.dir/src/dispatchers.cpp.o	12c8d8e994c2efb2
+9	10257	1698246624847044969	CMakeFiles/hycov.dir/src/GridLayout.cpp.o	5ce67274f143565
+8	10164	1698246624757045463	CMakeFiles/hycov.dir/src/main.cpp.o	f1131ceb3863bf1c
+12958	13027	0	CMakeFiles/install.util	8830f283a4594c7f
