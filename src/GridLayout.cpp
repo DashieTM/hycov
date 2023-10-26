@@ -83,9 +83,6 @@ void GridLayout::onWindowCreatedTiling(CWindow *pWindow, eDirection direction)
     bool floatingStateBak = pWindow->m_bIsFloating;
     bool fullscreenStateBak = pWindow->m_bIsFullscreen;
 
-    hycov_log(LOG,"onWindowCreatedTiling1 window{} ,work {}",pWindow,workspaceNameBack);
-
-
     if (isFirstTile) //only when original layout swith to overview do it once
     {
         if (PWINDOWORIWORKSPACE->m_iID != PACTIVEWORKSPACE->m_iID || PWINDOWORIWORKSPACE->m_szName != PACTIVEWORKSPACE->m_szName)
@@ -118,7 +115,6 @@ void GridLayout::onWindowCreatedTiling(CWindow *pWindow, eDirection direction)
     PNODE->ovbk_pWindow_isFloating = floatingStateBak;
     PNODE->ovbk_pWindow_isFullscreen = fullscreenStateBak;
     PNODE->ovbk_pWindow_workspaceName = workspaceNameBack;
-    hycov_log(LOG,"onWindowCreatedTiling2 window{} ,work {}",pWindow,workspaceNameBack);
     recalculateMonitor(pWindow->m_iMonitorID);
 }
 
@@ -335,7 +331,6 @@ void GridLayout::changeToActivceSourceWorkspace()
 
 void GridLayout::moveWindowToSourceWorkspace()
 {
-    std::string defaultWorkspaceName = "";
     CWorkspace *pWorkspace;
     
     for (auto &nd : m_lGridNodesData)
@@ -344,7 +339,6 @@ void GridLayout::moveWindowToSourceWorkspace()
         {
 
             pWorkspace = g_pCompositor->getWorkspaceByID(nd.ovbk_pWindow_workspaceID);
-            hycov_log(LOG,"moveWindowToSourceWorkspace window{} ,work {}",nd.pWindow,nd.ovbk_pWindow_workspaceName);
             if (!pWorkspace)
                 pWorkspace = g_pCompositor->createNewWorkspace(nd.ovbk_pWindow_workspaceID, nd.pWindow->m_iMonitorID,nd.ovbk_pWindow_workspaceName);
 
