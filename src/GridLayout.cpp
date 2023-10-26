@@ -69,23 +69,30 @@ void GridLayout::onWindowCreatedTiling(CWindow *pWindow, eDirection direction)
 
     const auto PACTIVEWORKSPACE = g_pCompositor->getWorkspaceByID(PMONITOR->activeWorkspace); 
 
+    const auto PWINDOWORIWORKSPACE = g_pCompositor->getWorkspaceByID(pWindow->m_iWorkspaceID);
 
     PNODE->workspaceID = pWindow->m_iWorkspaceID; // encapsulate window objects as node objects to bind more properties
     PNODE->pWindow = pWindow;
+    PNODE->workspaceName = PWINDOWORIWORKSPACE->m_szName;
 
     //record the window stats which are used by restore
-    int workspaceBack = pWindow->m_iWorkspaceID;
+    int workspaceBackID = pWindow->m_iWorkspaceID;
+    std::string workspaceNameBack = PWINDOWORIWORKSPACE->m_szName;
     Vector2D posBack = pWindow->m_vRealPosition.goalv();
     Vector2D sizeBack = pWindow->m_vRealSize.goalv();
     bool floatingStateBak = pWindow->m_bIsFloating;
     bool fullscreenStateBak = pWindow->m_bIsFullscreen;
 
+    hycov_log(LOG,"onWindowCreatedTiling1 window{} ,work {}",pWindow,workspaceNameBack);
+
+
     if (isFirstTile) //only when original layout swith to overview do it once
     {
-        if (pWindow->m_iWorkspaceID != PACTIVEWORKSPACE->m_iID)
+        if (PWINDOWORIWORKSPACE->m_iID != PACTIVEWORKSPACE->m_iID || PWINDOWORIWORKSPACE->m_szName != PACTIVEWORKSPACE->m_szName)
         {
             //change all client workspace to active worksapce 
             PNODE->workspaceID = pWindow->m_iWorkspaceID = PACTIVEWORKSPACE->m_iID;
+            PNODE->workspaceName = PACTIVEWORKSPACE->m_szName;
         }
 
         if (pWindow->m_bIsFullscreen)
@@ -105,12 +112,13 @@ void GridLayout::onWindowCreatedTiling(CWindow *pWindow, eDirection direction)
     }
 
     //record backup state to node which are used by restore
-    PNODE->ovbk_pWindow_workspaceID = workspaceBack;
+    PNODE->ovbk_pWindow_workspaceID = workspaceBackID;
     PNODE->ovbk_position = posBack;
     PNODE->ovbk_size = sizeBack;
     PNODE->ovbk_pWindow_isFloating = floatingStateBak;
     PNODE->ovbk_pWindow_isFullscreen = fullscreenStateBak;
-
+    PNODE->ovbk_pWindow_workspaceName = workspaceNameBack;
+    hycov_log(LOG,"onWindowCreatedTiling2 window{} ,work {}",pWindow,workspaceNameBack);
     recalculateMonitor(pWindow->m_iMonitorID);
 }
 
@@ -123,6 +131,9 @@ void GridLayout::onWindowRemovedTiling(CWindow *pWindow)
         return;
     m_lGridNodesData.remove(*PNODE);
 
+    if(m_lGridNodesData.empty()){
+        return;
+    }
     recalculateMonitor(pWindow->m_iMonitorID);
 
     lastNode = m_lGridNodesData.back();
@@ -324,19 +335,21 @@ void GridLayout::changeToActivceSourceWorkspace()
 
 void GridLayout::moveWindowToSourceWorkspace()
 {
-    std::string workspaceName = "";
+    std::string defaultWorkspaceName = "";
     CWorkspace *pWorkspace;
+    
     for (auto &nd : m_lGridNodesData)
     {
-        if (nd.pWindow && nd.pWindow->m_iWorkspaceID != nd.ovbk_pWindow_workspaceID)
+        if (nd.pWindow && (nd.pWindow->m_iWorkspaceID != nd.ovbk_pWindow_workspaceID || nd.workspaceName != nd.ovbk_pWindow_workspaceName ))
         {
 
             pWorkspace = g_pCompositor->getWorkspaceByID(nd.ovbk_pWindow_workspaceID);
-
+            hycov_log(LOG,"moveWindowToSourceWorkspace window{} ,work {}",nd.pWindow,nd.ovbk_pWindow_workspaceName);
             if (!pWorkspace)
-                pWorkspace = g_pCompositor->createNewWorkspace(nd.ovbk_pWindow_workspaceID, nd.pWindow->m_iMonitorID, workspaceName);
+                pWorkspace = g_pCompositor->createNewWorkspace(nd.ovbk_pWindow_workspaceID, nd.pWindow->m_iMonitorID,nd.ovbk_pWindow_workspaceName);
 
             nd.workspaceID = nd.pWindow->m_iWorkspaceID = nd.ovbk_pWindow_workspaceID;
+            nd.workspaceName = nd.ovbk_pWindow_workspaceName;
             nd.pWindow->m_vPosition = nd.ovbk_position;
             nd.pWindow->m_vSize = nd.ovbk_size;
             g_pHyprRenderer->damageWindow(nd.pWindow);
